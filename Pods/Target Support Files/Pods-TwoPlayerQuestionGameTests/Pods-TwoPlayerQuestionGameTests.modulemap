@@ -1,0 +1,6 @@
+framework module Pods_TwoPlayerQuestionGameTests {
+  umbrella header "Pods-TwoPlayerQuestionGameTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

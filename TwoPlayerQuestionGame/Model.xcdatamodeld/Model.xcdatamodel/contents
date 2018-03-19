@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Categ" representedClassName="Categ" syncable="YES" codeGenerationType="class">
+        <attribute name="catName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unlocked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="itsQuestions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Quest" inverseName="itsCategory" inverseEntity="Quest" syncable="YES"/>
+    </entity>
+    <entity name="Quest" representedClassName="Quest" syncable="YES" codeGenerationType="class">
+        <attribute name="cAns" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="used" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wAns1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wAns2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wAns3" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="itsCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categ" inverseName="itsQuestions" inverseEntity="Categ" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Quest" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Categ" positionX="-513" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>
